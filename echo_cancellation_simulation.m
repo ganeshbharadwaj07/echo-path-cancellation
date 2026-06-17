@@ -54,6 +54,6 @@ ylabel('Amplitude');
 
 subplot(3, 1, 3);
 plot(error_signal);
-title('Residual ECHO (After Echo Cancellation)');
+title('Residual Echo After LMS Cancellation');
 xlabel('Sample Number');
 ylabel('Amplitude');
