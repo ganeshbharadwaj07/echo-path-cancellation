@@ -40,20 +40,23 @@ for n = filter_order:n_samples
 end
 
 % Plot results
-subplot(3, 1, 1);
+subplot(3,1,1);
 plot(input_signal);
 title('Original Signal');
 xlabel('Sample Number');
 ylabel('Amplitude');
+grid on;
 
-subplot(3, 1, 2);
+subplot(3,1,2);
 plot(received_signal);
 title('Received Signal (with Echo)');
 xlabel('Sample Number');
 ylabel('Amplitude');
+grid on;
 
-subplot(3, 1, 3);
+subplot(3,1,3);
 plot(error_signal);
 title('Residual Echo After LMS Cancellation');
 xlabel('Sample Number');
 ylabel('Amplitude');
+grid on;
