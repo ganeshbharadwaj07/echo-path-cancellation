@@ -1,5 +1,9 @@
 % Echo Path Cancellation Simulation using LMS Adaptive Filter
 
+clc;
+clear;
+close all;
+
 % Parameters
 fs = 8000;                    % Sampling rate (Hz)
 duration = 1;                 % Duration of the signal (seconds)
@@ -18,7 +22,7 @@ received_signal = input_signal + echo_signal;
 
 % LMS adaptive filter settings
 filter_order = 256;            % Number of filter coefficients
-mu = 0.01;                    % Step size (learning rate)
+mu = 0.0001;                    % Step size (learning rate)
 weights = zeros(filter_order, 1);  % Initial filter weights (zero)
 n_samples = length(received_signal);
 
@@ -50,6 +54,6 @@ ylabel('Amplitude');
 
 subplot(3, 1, 3);
 plot(error_signal);
-title('Error Signal (After Echo Cancellation)');
+title('Residual ECHO (After Echo Cancellation)');
 xlabel('Sample Number');
 ylabel('Amplitude');
